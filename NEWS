@@ -5,6 +5,15 @@ spawned from [a tongue-in-cheek
 upstream issue](https://github.com/sopel-irc/sopel/issues/1962).
 
 
+### sopel-rainbow 0.1.1
+
+Fixed:
+
+* Empty input raises exception on upcoming Sopel 7.1 release ([#2][])
+
+[#2]: https://github.com/sopel-irc/sopel-rainbow/pull/2
+
+
 ### sopel-rainbow 0.1.0
 
 Initial release, featuring:
