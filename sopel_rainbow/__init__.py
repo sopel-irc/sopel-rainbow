@@ -50,9 +50,9 @@ def setup(bot):
 @module.commands('rainbow')
 def rainbow_cmd(bot, trigger):
     """Make text into a rainbow."""
-    text = clean(trigger.group(2))
+    text = clean(trigger.group(2) or '').strip()
 
-    if text == None:
+    if not text:
         bot.reply("I can't make a rainbow out of nothing!")
         return module.NOLIMIT
 
