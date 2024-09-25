@@ -2,8 +2,21 @@
 
 A Sopel plugin to make things RAINBOW COLORED.
 
+## Installing
 
-## Configuration
+Releases are hosted on PyPI, so after installing Sopel, all you need is `pip`:
+
+```shell
+$ pip install sopel-rainbow
+```
+
+## Configuring
+
+The easiest way to configure `sopel-rainbow` is via Sopel's configuration
+wizard—simply run `sopel-plugins configure rainbow` and enter the values for
+which it prompts you.
+
+### `order` setting
 
 By default, `sopel-rainbow` outputs colors in the "standard" rainbow `order`,
 ROYGBIV, subject to receiving clients' use of the customary meanings for IRC
@@ -34,6 +47,8 @@ order = # Americans and French can fight over this one
     2
 ```
 
+### `random_start` setting
+
 Starting the rainbow at the beginning of the `order` every time is also
 default behavior. If you want the rainbow to start at a random place every
 time instead, set the Boolean option `random_start` to `yes` or `on`:
@@ -43,15 +58,10 @@ time instead, set the Boolean option `random_start` to `yes` or `on`:
 random_start = on
 ```
 
-
 ## Dependencies
 
-Only Sopel itself, version 7.0 or higher.
+* Sopel version 7.1 or higher
+* Python 3.8 or higher
 
-If installed on a bot using Sopel 7.1+, `sopel-rainbow` will strip control
-codes from the input text before applying the rainbow colors. (Sopel 7.0.x
-does not offer this feature, so feeding formatted text into the `.rainbow`
-command might yield unexpected results.)
-
-This version of `sopel-rainbow` will not work with Sopel 9.0+. A future
-release will correct this, sometime before Sopel 9 becomes stable.
+Sopel 7.x should still run on Python 2.7 or older Python 3 releases, but it's
+not maintained any more; and neither is this plugin tested on anything older.
